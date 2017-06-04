@@ -1,0 +1,709 @@
+ 
+ 
+ RIGIS-CAT-ID    =s44dbs92
+ DATA-SET-IDENT  =rm2sbg
+ DISTRIB-NOTES   =(c)rigis 1989 contrib by databasics inc
+ THEME-KEYWORDS  =us census demography population ethnic mix
+ DESCRIPTION1    =census90 sample count data from stf3a for
+ DESCRIPTION2    =population education economy data by block group
+ DESCRIPTION3    =sample data not total count-not all data on stf3a
+ ACC-REV-DATE    =1192
+ DATA-STRUCTURE  =vector topological with feature attributes
+ COORD-PRECIS    =arc-info single precision
+ INTENDED-USE    =statistical analysis of demograhic data by blk grp
+ INTENDED-SCALE  =24000
+ TRANSFER-FORMAT =arc-info export
+ TRANSFER-SIZE   =1-4 mb
+ SPLOBJ-TYPE     =polygon area
+ RESOLUTION      =us census block group
+ SPLOBJ-COUNT    =892 polygons
+ AREA-EXT-BND    =LL 229173.516 23020.893 UR 432053.688 340890.062
+ AREA-EXCL-BND   =none
+ PROJECTION      =transverse mercator
+ COORDSYS-UNIT   =RISPC-feet
+ HORIZ-DATUM     =nad83
+ VERT-DATUM      =na
+ REL-DB-ID       =rm2sbg-pat
+ REL-DB-ORG      =us census
+ FIELD-NAME1     =town
+ FIELD-CHAR1     =16 c
+ FIELD-DESC1     =ri town name
+ FIELD-DOM1      =text
+ FIELD-ASSC1     =none
+ FIELD-NAME2     =abbrev
+ FIELD-CHAR2     =5 c
+ FIELD-DESC2     =ri town name abbreviation
+ FIELD-DOM2      =text
+ FIELD-ASSC2     =rimaps2-ref
+ FIELD-NAME3     =fmcdccd90
+ FIELD-CHAR3     =5 c
+ FIELD-DESC3     =census minor civil division and cfips code
+ FIELD-DOM3      =text
+ FIELD-ASSC3     =census-doc
+ FIELD-NAME4     =ctbna90
+ FIELD-CHAR4     =5 c
+ FIELD-DESC4     =us census tract number
+ FIELD-DOM4      =text
+ FIELD-ASSC4     =us census doc
+ FIELD-NAME5     =bg90
+ FIELD-CHAR5     =1 c
+ FIELD-DESC5     =us census block group code
+ FIELD-DOM5      =text
+ FIELD-ASSC5     =census-doc
+ FIELD-NAME6     =s1-s88
+ FIELD-CHAR6     =7 i
+ FIELD-DESC6     =sample count data for us census block group data
+ FIELD-DOM6      =varies
+ FIELD-ASSC6     =rimaps2-ref
+ SOURCE-CRTR     =us census bureau
+ SOURCE-ORIG1    =us census file stf3a
+ SOURCE-ORIG2    =databasics inc - providence ri
+ BIBLIOG-REF     =rimaps vol2 - databasics inc 1992
+ SOURCE-SCAL     =100000- us census spatial sources vary
+ SOURCE-DATE     =1990
+ DATA-DATE       =1992
+ AUTO-EQPT       =pc arc-info
+ AUTO-PROC1      =us census block group  polygons were converted to
+ AUTO-PROC2      =arc-info spatial data format-sample count values
+ AUTO-PROC3      =extracted for selected fields - joined to pat file
+ PROC-TOL        =not to rigis standards
+ PROC-DATE       =0692
+ POS-ACCU        =plus or minus 500 feet
+ POS-ACCUCK      =none-visually compared to rigis town line coverage
+ ATTR-ACCU       =not to rigis standards-us census data
+ ATTR-ACCUCK     =none locally-us census data
+ DATA-INTEG      =topogically complete arc info polygon coverage
+ METADATA-LIST   =0998-js
+ CONTACT-TITLE   =rigis coordinator
+ CONTACT-ORG     =ri dept of administration-division of planning
+ CONTACT-ADDR    =one capitol hill
+ CONTACT-CTYST   =providence ri 02908-5872
+ CONTACT-PHONE   =401-222-6483
+ CONTACT-EMAIL   =stach@rigis.doa.state.ri.us
+ 
+ 
+RIMAPS2.REF  Reference data file listing to support 
+	US Census Data for Rhode Island as contained in:
+        RIGIS Database files - RIGIS-CAT-ID 
+s44dmm92 and s44dms92 (towns)
+ s44dtm92 and s44dts92 (census tracts)
+   and s44dbm92 and s44dbs92 (block groups)
+
+All Information extracted from:
+RIMAPS Volume 2, Maps 1-65, November 1992 
+
+A RIMAPS Map Book
+Published by
+
+Databasics, Inc.
+428 Smith St.
+Providence, RI 02908
+401 351-9120
+
+Copyright (C) 1992 by Databasics, Inc.
+
+...................................................
+
+City and town abbreviations are as follows:
+
+Barrn              Barrington      
+Brist              Bristol         
+Burrl              Burrilville     
+CFals              Central Falls   
+Chrls              Charlestown     
+Covnt              Coventry        
+Crans              Cranston        
+Cumbr              Cumberland      
+EGren              East Greenwich
+EProv              East Providence 
+Exetr              Exeter          
+Fostr              Foster          
+Glstr              Glocester       
+Hopkn              Hopkinton       
+James              Jamestown       
+Johns              Johnston        
+Lincn              Lincoln         
+LitCm              Little Compton  
+Mdltn              Middletown      
+Narra              Narragansett    
+Newpt              Newport         
+NShor              New Shoreham    
+NKing              North Kingstown 
+NProv              North Providence
+NSmth              North Smithfield
+Pawtk              Pawtucket       
+Ports              Portsmouth      
+Provd              Providence      
+Richm              Richmond        
+Scitu              Scituate        
+Smith              Smithfield      
+SKing              South Kingstown 
+Tvrtn              Tiverton        
+Warrn              Warren          
+Warwk              Warwick 
+Westr              Westerly        
+WGren              West Greenwich  
+WWark              West Warwick    
+Woons              Woonsocket
+
+..................................................................    
+
+
+
+  
+Source Data Items:  S1-S88
+Actual Count Data Extracted from:
+U.S. Census 1990 Standard Tape File - STF3A                                                        
+==================================== 
+      S1. Aggregate Number of Children Born to Females 15 to 44  
+      S2. Aggregate Persons in Occupied House                    
+      S3. Land Area (sq. mi.)                                    
+      S4. Employed Persons Age 16 and over                       
+      S5. Families                                               
+      S6. Families Below Poverty with Children under 18          
+      S7. Families with 2+ Workers                               
+      S8. Families with Children under 18                        
+      S9. Female Headed Families                                 
+      S10. Female Headed Families with own Children under 18     
+      S11. Female Head Households below Poverty with Children <6 
+      S12. Female Single Household Heads                         
+      S13. Females Age 15 to 44                                  
+      S14. Females Age 16 and over                               
+      S15. Females 16 and over, Employed                         
+      S16. Females Employed with all Children under 6            
+      S17. Females in Labor Force
+      S18. Government Workers                                    
+      S19. Hispanic Origin--Columbia                             
+      S20. Hispanic Origin--Dominican Republic                   
+      S21. Hispanic Origin--Guatemala                            
+      S22. Hispanic Origin--Puerto Rico                          
+      S24. Houses Built Before 1940                              
+      S25. Houses Occupied After 1984                            
+      S26. Households                                            
+      S27. Houses (Housing Units)                                
+      S28. Houses Occupied Before 1960                           
+      S29. Houses on Public Sewers                               
+      S30. Houses with 4 or more Bedrooms                        
+      S31. Houses with Well Water                                
+      S32. Males Age 16+ in Labor Force                          
+      S33. Males Unemployed                                      
+      S34. Married Couple Families                               
+      S35. Married Couples with Children under 18                
+      S39. Aggregate Non-White Income in 1989                    
+      S40. Occupied Houses                                       
+      S41. Occupied Houses Using Coal and Wood Heat              
+      S42. Occupied Houses Using Electrical Heat                 
+      S43. Occupied Houses with 2 or more Vehicles               
+      S44. Occupied Houses with no Phone                         
+      S46. Persons                                               
+      S47. Persons 16 or over Working in Place of Residence      
+      S48. Persons 16 to 19 Employed and in School               
+      S49. Persons 18 and over                                   
+      S50. Persons 65 and over Below Poverty Level               
+      S51. Persons Age 15 and over                               
+      S52. Persons Age 15 and over Ever Married                  
+      S53. Persons Age 16 and over                               
+      S54. Persons Age 16-64, Civilians and Non-Institutionalized
+      S55. Persons Age 16 to 64                                  
+      S56. Persons Civilian, Non-Inst, Age 16-64 w/ Work Disability
+      S57. Persons Age 25 and over                               
+      S58. Persons Age 3 and over Attending School               
+      S59. Persons Age 3+ in Private Elementary or High School   
+      S60. Persons Age 3 and over, Non-White & in School         
+      S61. Persons Age 5 and over                                
+      S62. Persons Age 65 and over                               
+      S63. Persons Born in Rhode Island                          
+      S64. Persons Cambodian                                     
+      S65. Persons Completed College                             
+      S66. Persons Age 18 and over Completing less than 9th Grade
+      S67. Persons Divorced or Separated                         
+      S68. Persons Drive Alone to Work                           
+      S69. Persons Drive less than 15 Min to Work                
+      S70. Persons Employed as Managers and Professionals        
+      S71. Persons Employed as Operators/Fabricators/Laborers    
+      S72. Persons Foreign Born                                  
+      S73. Persons Non-White Age 3 and over                      
+      S74. Persons Not Completing High School                    
+      S75. Persons Over Age 65 with no Vehicle Available         
+      S76. Persons Self-Employed                                 
+      S77. Persons 5 and over Speak English Not Well/Not at All  
+      S78. Persons Speak Portuguese in Home                      
+      S79. Persons Speak Spanish in Home                         
+      S80. Persons of French Canadian Ancestry                   
+      S81. Persons of Irish Ancestry                             
+      S82. Persons of Italian Ancestry                           
+      S83. Persons of Portuguese Ancestry                        
+      S84. Persons 5 and over Speak only English in Home         
+      S85. Households with Public Assistance Income              
+      S86. Persons Non-White                                     
+      S88. Employed Females Age 16 and over                      
+      
+
+...........................................................
+Median and Percentage Data M1-65
+As computed from STF3A Source Data by Databasics.
+
+Almost all valuess are ratios expressed as percentages.  
+
+This is usually composed of two items--a numerator
+  (labeled "N:") divided by a denominator (labeled "D:"), to create a percentage.  For
+  example, FOR M1, the percent of persons age 25 or over that completed college is computed by
+  dividing the number of completing college (the numerator) by the total population age 25 or
+  over for the block group (the denominator).
+
+      M1. Percent Age 25+ that Completed College
+      M2. Percent Age 18+ Not Completing High School
+      M3. Percent Age 18+ with Less than 9th Grade
+      M4. Percent Age 3+ in Private Elementary/High School
+      M5. Percent of all Non-Whites in School
+      M6. Percent Age 16-19 Employed & in School
+      M7. Percent of Working as Managers/Professionals
+      M8. Percent of Workers who are Self-Employed
+      M9. Percent Work as Operators/Fabricators/Laborers
+      M10. Percent of Workers Employed in Government
+      M11. Percent of Males in Labor Force Unemployed
+      M12. Percent of Families with 2 or more Workers
+      M13. Percent of Females Age 16+ who are Employed
+      M14. Percent Persons in Labor Force who are Female
+      M15. Percent of Employed Females w/ All Children <6
+      M16. Percent of Age 16-64 with Work Disability
+      M17. Percent Driving Less than 15 Min to Work
+      M18. Percent Driving to Work Alone
+      M19. Percent Persons Working in Town of Residence
+      M20. Median Household Income in 1989
+      M21. Per Capita Income in 1989
+      M22. Non-White Per Capita Income in 1989
+      M23. Percent Households with Public Assistance
+      M24. Median Value of Owner Occupied Houses
+      M25. Median Home Owner Costs as Percent of Income
+      M26. Median Gross Cash Rent
+      M27. Median Gross Cash Rent as Percent of Income
+      M28. Percent Persons Age 65+ below Poverty Level
+      M29. Percent Poverty Families, with Children <18
+      M30. Percent of Houses with 4 or more Bedrooms
+      M31. Percent of Occupied Houses with 2+ Vehicles
+      M32. Percent of Houses on Well Water
+      M33. Percent of Houses on Public Sewers
+      M34. Percent of Houses Built Before 1940
+      M35. Percent Houses Owner Moved in Before 1960
+      M36. Percent Houses Owner Moved in After 1984
+      M37. Percent of Occupied Houses with no Telephone
+      M38. Percent Occupied Houses Heat with Electricity
+      M39. Percent Occupied Houses Heat with Coal/Wood
+      M40. Average Persons per Occupied Housing Unit
+      M41. Percent Houses with no Car for Householder 65+
+      M42. Percent Households with Married Couple Families
+      M43. Percent Married Couples w/ Children Under 18
+      M44. Percent of Persons Age 15+ Ever Married
+      M45. Percent of Persons Divorced or Separated
+      M46. Average No of Children Born to Women Age 15-44
+      M47. Percent of Households with Female Head
+      M48. Percent Families w/ Children, w/ Female Head
+      M49. Percent Female Heads in Poverty w/ Children <6
+      M50. Percent of Persons Born in Rhode Island
+      M51. Percent of Persons Foreign Born
+      M52. Percent of Persons Age 5+ only Speak English
+      M53. Percent Speak English Not Well/Not at All
+      M54. Percent Persons who Speak Portuguese in Home
+      M55. Percent Persons who Speak Spanish in Home
+      M56. Percent Italian Ancestry
+      M57. Percent Irish Ancestry
+      M58. Percent French Canadian Ancestry
+      M59. Percent Portuguese Ancestry
+      M60. Percent Race Cambodian
+      M61. Percent Hispanic Origin--Puerto Rican
+      M62. Percent Hispanic Origin--Dominican Republic
+      M63. Percent Hispanic Origin--Columbian
+      M64. Percent Hispanic Origin--Guatemalan
+      M65. Persons per Square Mile of Land
+
+
+______________________________________________________________________________
+Subject Index
+
+This index lists by subject heading:
+ S1-S88 - Source Data Items- ACTUAL COUNT FOR RIMAPS VOL1, SAMPLE STATISTICAL COUNT FOR RIMAPS VOL2 
+ M1-M65 - Median or Percentages - FOR BOTH RIMAPS VOLUME 1 AND RIMAPS VOLUME 2.
+Reference is also included here for those data included in RIMAPS Volume 1. 
+ All categories preceeded by:
+1----RIMAPS Volume 1 Data and included in RIGIS Census Data Files s44dtn91, s44dct91, and s44dbg91.
+2----RIMAPS Volume 2 Data -s44dmm92, s44dms92, s44dtm92, s44dts92, s44dbm92, and s44dbs92
+
+   
+Age                                                                             
+   1-S4.  Count of Persons Age 0 to 18                                          
+   1-S3.  Count of Persons Age 0 to 5                                           
+   1-S5.  Count of Persons Age 15 and Over                                      
+   1-S6.  Count of Persons Age 19 and Over                                      
+   1-S7.  Count of Persons Age 65 and Over                                      
+   1-S8.  Count of Persons Age 85 and Over                                      
+   1-M1.   Percent of Population Age 0 to 18                                     
+   1-M2.   Percent of Population Age 0 to 5                                      
+   1-M3.   Percent of Population Age 65 and Over                                 
+   1-M4.   Percent of Population Age 85 and Over                                 
+   2-S49. Persons 18 and over                                                   
+   2-S51. Persons Age 15 and over                                               
+   2-S53. Persons Age 16 and over                                               
+   2-S55. Persons Age 16 to 64                                                  
+   2-S54. Persons Age 16-64, Civilians and Non-Institutionalized                
+   2-S57. Persons Age 25 and over                                               
+   2-S61. Persons Age 5 and over                                                
+   2-S62. Persons Age 65 and over                                               
+                                                                                
+Age of Homeowners                                                               
+   1-S30. Count of Occupied Housing Units with Owner Age 15 - 44                
+   1-S36. Count of Owners Age 65 and Over                                       
+   1-M26.  Percent of Homeowners Age 15 - 44                                     
+   1-M27.  Percent of Homeowners Age 65 and Over                                 
+                                                                           
+Age of Renters                                                                  
+   1-S31. Count of Occupied Housing Units with Renter Age 15 - 44               
+   1-S37. Count of Renters Age 65 and Over                                      
+   1-M37.  Percent of Renters Age 15 - 44                                        
+   1-M38.  Percent of Renters Age 65 and Over                                    
+                                                                                
+American Indian                                                                 
+   see Race
+Ancestry                                                                        
+   2-M58.  Percent French Canadian Ancestry                                      
+   2-M57.  Percent Irish Ancestry                                                
+   2-M56.  Percent Italian Ancestry                                              
+   2-M59.  Percent Portuguese Ancestry                                           
+   2-M50.  Percent of Persons Born in Rhode Island                               
+   2-M51.  Percent of Persons Foreign Born                                       
+   2-S63. Persons Born in Rhode Island                                          
+   2-S64. Persons Cambodian                                                     
+   2-S72. Persons Foreign Born                                                  
+   2-S80. Persons of French Canadian Ancestry                                   
+   2-S81. Persons of Irish Ancestry                                             
+   2-S82. Persons of Italian Ancestry                                           
+   2-S83. Persons of Portuguese Ancestry                                        
+                                                                                
+Apartment Houses                                                                
+   1-S40. Count of Housing Units with 5+ Units per Structure                    
+   1-M22.  Percent of Houses with 5+ Units per Structure                         
+                                                                                
+Area                                                                            
+   2-MS3.  Land Area (sq. mi.)                                                   
+                                                                                
+Asian                                                                           
+   see Race                                                                     
+                                                                                
+Black                                                                           
+   see Race                                                                     
+                                                                                
+Cambodian                                                                       
+   see Race                                                                     
+                                                                                
+Children                                                                        
+   2-S1.  Aggregate Number of Children Born to Females 15 to 44                 
+   2-M46.  Average No of Children Born to Women Age 15-44                        
+                                                                                
+Condominiums                                                                    
+   1-S40. Count of Housing Units with 5+ Units per Structure                    
+   1-M22.  Percent of Houses with 5+ Units per Structure                         
+                                                                                
+Disability                                                                      
+   2-M16.  Percent of Age 16-64 with Work Disability                             
+   2-S56. Persons Civilian, Non-Inst, Age 16-64 w/ Work Disability
+                          
+Divorce/Separation                                                              
+   1-S16. Count of Persons Divorced or Separated                                
+   1-M12.  Percent Divorced or Separated                                         
+   2-M45.  Percent of Persons Divorced or Separated                              
+   2-S67. Persons Divorced or Separated                                         
+                                                                                
+Education                                                                       
+   2-M6.   Percent Age 16-19 Employed & in School                                
+   2-M2.   Percent Age 18+ Not Completing High School                            
+   2-M3.   Percent Age 18+ with Less than 9th Grade                              
+   2-M1.   Percent Age 25+ that Completed College                                
+   2-M4.   Percent Age 3+ in Private Elementary/High School                      
+   2-M5.   Percent of all Non-Whites in School                                   
+   2-S48. Persons 16 to 19 Employed and in School                               
+   2-S66. Persons Age 18 and over Completing less than 9th Grade                
+   2-S58. Persons Age 3 and over Attending School                               
+   2-S60. Persons Age 3 and over, Non-White & in School                         
+   2-S59. Persons Age 3+ in Private Elementary or High School                   
+   2-S65. Persons Completed College                                             
+   2-S74. Persons Not Completing High School                                    
+                                                                                
+Elderly                                                                         
+   see Age                                                                      
+                                                                                
+Employment                                                                      
+   2-MS4.  Employed Persons Age 16 and over                                      
+   2-MS7.  Families with 2+ Workers                                              
+   2-S15. Females 16 and over, Employed                                         
+   2-S18. Government Workers                                                    
+   2-S32. Males Age 16+ in Labor Force                                          
+   2-S33. Males Unemployed                                                      
+   2-M9.   Percent Work as Operators/Fabricators/Laborers                        
+   2-M12.  Percent of Families with 2 or more Workers                            
+   2-M11.  Percent of Males in Labor Force Unemployed                            
+   2-M10.  Percent of Workers Employed in Government                             
+   2-M8.   Percent of Workers who are Self-Employed                              
+
+Employment (cont.)
+   2-M7.   Percent of Working as Managers/Professionals                          
+   2-S70. Persons Employed as Managers and Professionals                        
+   2-S71. Persons Employed as Operators/Fabricators/Laborers                    
+   2-S76. Persons Self-Employed  
+Employment-Residence                                                            
+   2-M19.  Percent Persons Working in Town of Residence                          
+   2-S47. Persons 16 or over Working in Place of Residence                      
+                                                                                
+Employment-Transportation                                                       
+   2-M17.  Percent Driving Less than 15 Min to Work                              
+   2-M18.  Percent Driving to Work Alone                                         
+   2-S68. Persons Drive Alone to Work                                           
+   2-S69. Persons Drive less than 15 Min to Work                                
+                                                                                
+Families                                                                        
+   2-S5.  Families                                                              
+   2-S8.  Families with Children under 18                                       
+                                                                                
+Family Size                                                                     
+   1-S38. Count of Family Households with 6 or More Persons                     
+   1-M20.  Percent Large Family Households                                       
+   1-M17.  Persons per Family                                                    
+                                                                                
+Females                                                                         
+   1-S21. Count of Female Householders with Related Children                    
+   1-S20. Count of Female Householders, No Husband Present                      
+   2-S88. Employed Females Age 16 and over                                      
+   2-S9.  Female Headed Families                                                
+   2-S10. Female Headed Families with own Children under 18                     
+   2-S12. Female Single Household Heads                                         
+   2-S13. Females Age 15 to 44                                                  
+   2-S14. Females Age 16 and over                                               
+   2-S16. Females Employed with all Children under 6                            
+   2-S17. Females in Labor Force        
+   2-M48.  Percent Families w/ Children, w/ Female Head                          
+   1-M13.  Percent Female Headed Households                                      
+   1-M14.  Percent Female Headed Households with Children                        
+   2-M14.  Percent Persons in Labor Force who are Female                         
+   2-M15.  Percent of Employed Females w/ All Children <6                        
+   2-M13.  Percent of Females Age 16+ who are Employed                           
+   2-M47.  Percent of Households with Female Head                                
+               
+Group Quarters                                                                  
+   1-S22. Count of Persons in Group Quarters                                    
+   1-S18. Count of Persons not in Group Quarters                                
+   1-M16.  Percent of Population Living in Group Quarters                        
+                                                                                
+Hispanic Origin                                                                 
+   1-S44. Count of Hispanic Homeowners                                          
+   1-S14. Count of Persons of Hispanic Origin                                   
+   2-S19. Hispanic Origin--Columbia                                             
+   2-S20. Hispanic Origin--Dominican Republic                                   
+   2-S21. Hispanic Origin--Guatemala                                            
+   2-S22. Hispanic Origin--Puerto Rico                                          
+   1-M29.  Percent Hispanic Homeowners                                           
+   2-M63.  Percent Hispanic Origin--Columbian                                    
+   2-M62.  Percent Hispanic Origin--Dominican Republic                           
+   2-M64.  Percent Hispanic Origin--Guatemalan                                   
+   2-M61.  Percent Hispanic Origin--Puerto Rican                                 
+   1-M10.  Percent Hispanics                                                     
+                                                                                
+Hmong                                                                           
+   see Race                                                                     
+                                                                                
+Homeless                                                                        
+   1-S45. Count of Homeless in Shelters and on Streets                          
+   1-M24.  Percent Homeless Population                                           
+                                                                                
+Homeowners                                                                      
+   1-S24. Count of Occupied Housing Units                                       
+   1-S26. Count of Owner Occupied Housing Units                                 
+   1-S30. Count of Owner Occupied Housing Units with Owner Age 15 - 44          
+   1-S36. Count of Owners Age 65 and Over                                       
+   1-M30.  Percent Asian Homeowners                                              
+   1-M28.  Percent Black Homeowners                                              
+   1-M29.  Percent Hispanic Homeowners                                           
+   1-M21.  Percent Single Detached Houses                                        
+   1-M26.  Percent of Homeowners Age 15 - 44                                     
+   1-M27.  Percent of Homeowners Age 65 and Over                                 
+                                                                                
+Households                                                                      
+   2-S26. Households                                                            
+                                                                                
+Housing Cost                                                                    
+   2-M25. Homes with Mortgage, Owner Cost as Percent of Income                  
+   2-M27. Median Gross Rent as % of Household Income in 1989 
+Housing Unit Sale/Rent Value                                                    
+   2-M26.  Median Gross Cash Rent                                                
+   2-M27.  Median Gross Cash Rent as Percent of Income                           
+   2-M25.  Median Home Owner Costs as Percent of Income                          
+   1-M40.  Median Value Contract Rent                                            
+   1-M35.  Median Value of Houses (X $1000)                                      
+   2-M24.  Median Value of Owner Occupied Houses                                 
+                                                                                
+Housing Units                                                                   
+   1-S32. Aggregate Rooms in Housing Units                                      
+   2-M40.  Average Persons per Occupied Housing Unit                             
+   1-S2.  Count of Households (Occupied Housing Units)                          
+   1-S23. Count of Housing Units                                                
+   1-S40. Count of Housing Units with 5+ Units in Structure                     
+   1-S41. Count of Mobile Homes or Trailers                                     
+   1-S24. Count of Occupied Housing Units (same as S2)                          
+   1-S34. Count of Single Family Detached Homes                                
+   1-S25. Count of Vacant Housing Units                                         
+   2-S27. Houses (Housing Units)                                                
+   2-S24. Houses Built Before 1940                                              
+   2-S25. Houses Occupied After 1984                                            
+   2-S28. Houses Occupied Before 1960                                           
+   2-S30. Houses with 4 or more Bedrooms                                        
+   2-S40. Occupied Houses                                                       
+   1-M19.  Percent Crowded Housing                                               
+   2-M36.  Percent Houses Owner Moved in After 1984                              
+   2-M35.  Percent Houses Owner Moved in Before 1960                             
+   1-M25.  Percent Mobile Homes or Trailers                                      
+   1-M21.  Percent Single/Detached Houses                                        
+   2-M34.  Percent of Houses Built Before 1940                                   
+   2-M30.  Percent of Houses with 4 or more Bedrooms                             
+   1-M22.  Percent of Houses with 5+ Units per Structure                         
+   1-M23.  Rooms per House                                                       
+                                                                                
+Income                                                                          
+   2-S39. Aggregate Non-White Income in 1989                                    
+   2-S85. Households with Public Assistance Income                              
+   2-M20.  Median Household Income in 1989 (X 100)                               
+   2-M22.  Non-White Per Capita Income in 1989 (X 100)                             
+   2-M21.  Per Capita Income in 1989 (X 100)                                     
+                                                                                 
+Institutionalized Persons                                                       
+   see Group Quarters       
+
+Language                                                                        
+   2-M54.  Percent Persons who Speak Portuguese in Home                          
+   2-M55.  Percent Persons who Speak Spanish in Home                             
+   2-M53.  Percent Speak English Not Well/Not at All                             
+   2-M52.  Percent of Persons Age 5+ only Speak English                          
+   2-S77. Persons 5 and over Speak English Not Well/Not at All                  
+   2-S84. Persons 5 and over Speak only English in Home                        
+   2-S78. Persons Speak Portuguese in Home                                      
+   2-S79. Persons Speak Spanish in Home                                         
+ 
+                                                                                
+Laotian                                                                         
+   see Race                                                                     
+                                                                                
+Married Couples (see also Single Persons)                                       
+   1-S17. Count of Married Person Age 15 and Over                               
+   1-S15. Count of Persons Now Married, Except Separated                        
+   2-S34. Married Couple Families                                               
+   2-S35. Married Couples with Children under 18                                
+   2-M42.  Percent Households with Married Couple Families                       
+   2-M43.  Percent Married Couples w/ Children Under 18                          
+   2-M44.  Percent of Persons Age 15+ Ever Married                               
+   1-M11.  Percent of Population Currently Married                               
+   2-S52. Persons Age 15 and over Ever Married                                  
+                                                                                
+Population                                                                      
+   2-S2.  Aggregate Persons in Occupied House                                   
+   1-S1.  Count of Persons                                                      
+   2-S46. Persons                                                               
+                                                                                
+Population Density                                                              
+   2-M65.  Persons per Square Mile of Land                                       
+                                                                                
+Poverty                                                                         
+   2-S6.  Families Below Poverty with Children under 18                         
+   2-S11. Female Head Households below Poverty with Children <6                 
+   2-M49.  Percent Female Heads in Poverty w/ Children <6                        
+   2-M28.  Percent Persons Age 65+ below Poverty Level                           
+   2-M29.  Percent Poverty Families, with Children <18                           
+   2-S50. Persons 65 and over Below Poverty Level                               
+                                                                                
+Race                                                                            
+   2-M60.  Percent Race Cambodian                                                
+   2-S86. Persons Non-White                                                     
+   2-S73. Persons Non-White Age 3 and over  
+
+Race-American Indians                                                           
+   1-S11. Count of American Indians                                             
+   1-M7.   Percent of American Indians                                           
+                                                                                
+Race-Asians                                                                     
+   1-S12. Count of Asians Except Indo-Chinese                                   
+   1-S13. Count of Indo-Chinese                                                 
+   1-M8.   Percent Asians and Pacific Islanders                                  
+   1-M9.   Percent Indo-Chinese                                                  
+                                                                                
+Race-Blacks                                                                     
+   1-S10. Count of Black Persons                                                
+   1-M6.   Percent Blacks                                                        
+                                                                                
+Race-Hispanics                                                                  
+   see Hispanic Origin                                                          
+                                                                                
+Race-Non-White                                                                  
+   1-S9.  Count of White Persons                                                
+   1-M5.   Percent of Population Non-White                                       
+                                                                                
+Rent/Renters                                                                    
+   1-S31. Count of Occupied Housing Units with Renter Age 15 - 44               
+   1-S27. Count of Renter Occupied Housing Units                                
+   1-S37. Count of Renters Age 65 and Over                                      
+   1-S28. Count of Vacant Housing Units for Rent                                
+   1-M40.  Median Contract Rent                                                  
+   1-M36.  Percent Renter Occupied Houses                                        
+   1-M37.  Percent Renters Age 15 - 44                                           
+   1-M38.  Percent Renters Age 65 and Over                                       
+   1-M39.  Percent of Houses Vacant and For Rent                                 
+                                                                                
+Rooms                                                                           
+   1-M23.  Rooms per House                                                       
+                                                                                
+Sex                                                                             
+   see Females                                                                  
+                                                                                
+Single Persons                                                                  
+   1-S19. Count of Householders Living Alone                                    
+   1-M15.  Percent of Population Living Alone                                    
+                                                                                
+Spanish                                                                         
+   see Hispanic Origin                    
+
+Thai                                                                            
+   see Race                                                                     
+                                                                                
+Utilities                                                                       
+   2-S29. Houses on Public Sewers                                               
+   2-S31. Houses with Well Water                                                
+   2-S41. Occupied Houses Using Coal and Wood Heat                              
+   2-S42. Occupied Houses Using Electrical Heat                                 
+   2-S44. Occupied Houses with no Phone                                         
+   2-M39.  Percent Occupied Houses Heat with Coal/Wood                           
+   2-M38.  Percent Occupied Houses Heat with Electricity                         
+   2-M33.  Percent of Houses on Public Sewers                                    
+   2-M32.  Percent of Houses on Well Water                                       
+   2-M37.  Percent of Occupied Houses with no Telephone                          
+                                                                                
+Vacant Housing                                                                  
+   1-S25. Count of Vacant Housing Units                                         
+   1-S28. Count of Vacant Housing Units For Rent                                
+   1-S29. Count of Vacant Housing Units For Sale                                
+   1-S39. Count of Vacant Housing Units For Seasonal Use                        
+   1-M34.  Percent Seasonal Houses                                               
+   1-M31.  Percent Vacant Houses                                                 
+   1-M32.  Percent Vacant Houses, Vacant Over 6 Months                           
+   1-M39.  Percent of Houses Vacant and For Rent                                 
+   1-M33.  Percent of Houses Vacant and For Sale                                 
+                                                                                
+Value                                                                           
+   see Housing Unit Sale/Rent Value                                             
+                                                                                
+Vehicles                                                                        
+   2-S43. Occupied Houses with 2 or more Vehicles                               
+   2-M41.  Percent Houses with no Car for Householder 65+                        
+   2-M31.  Percent of Occupied Houses with 2+ Vehicles                           
+   2-S75. Persons Over Age 65 with no Vehicle Available                         
+                                                                                
+Vietnamese                                                                      
+   see Race                                                                     
+                                                                                
+White                                                                           
+   see Race                                                                     
+
